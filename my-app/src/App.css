@@ -1,0 +1,127 @@
+html, body, #root, .App {
+   height: 100%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+#header {
+  height: 50px;
+  background: #999;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+#header > div {
+  display: inline-block;
+  width: calc(100% / 5.3);
+  /* border:1px solid red; */
+  text-align:center;
+  /* margin:2%; */
+  padding:10px;
+  cursor: pointer;
+}
+
+#footer {
+  height: 50px;
+  background: #999 ;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+#footer > div {
+  display: inline-block;
+  width: calc(100% / 2.3);
+  /* border:1px solid red; */
+  text-align:center;
+  /* margin:2%; */
+  padding:10px;
+  cursor: pointer;
+}
+
+#content {
+  margin-top: 50px;
+  background: #600;
+  width: 100%;
+  margin-bottom: 50px;
+  height: 100%;
+}
+
+#sidebar {
+  height: 100%;
+  float: left;
+  background: #FFF;
+  border:5px solid #000;
+  width: 9%;
+}
+
+#arrange {
+  height: 50%;
+  background: #FFF;
+  border:5px solid #000;
+  width: 100%;
+}
+
+#arrange table {
+  border-collapse: collapse;
+  width: 90%;
+  height: 100%;
+}
+
+#arrange td {
+  border: 2px solid #000;
+
+  /* width: 100%; */
+  /* height: 100%; */
+}
+
+#mixer {
+  height: 50%;
+  background: #FFF;
+  border:5px solid #000;
+  width: 100%;
+}
+
+#pianoroll {
+  display: none;
+  height: 50%;
+  background: #FFF;
+  border:5px solid #000;
+  width: 100%;
+}
+
+#pianoroll > table {
+  /* border: 2px solid #000; */
+  border-collapse: collapse;
+  width: 90%;
+  height: 100%;
+}
+
+#pianoroll td {
+  border: 2px solid #000;
+
+  /* width: 100%; */
+  /* height: 100%; */
+}
+
+.region {
+  background-color: #000;
+}
+
+.selected_region {
+  background-color: #666;
+}
+
+
+
+.Track {
+  float: left;
+  width: 50px;
+  height: 100%;
+  background: #888;
+  border:5px solid #000;
+}
