@@ -125,3 +125,18 @@ html, body, #root, .App {
   background: #888;
   border:5px solid #000;
 }
+
+#contextMenu {
+  display: none;
+  position: absolute
+}
+
+#contextMenu div {
+  display:block;
+  position:static;
+  margin-bottom:5px;
+}
+
+#contextMenu div p a {
+  cursor: pointer;
+}

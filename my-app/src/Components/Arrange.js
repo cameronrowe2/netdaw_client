@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
+import RightClickMenu from './RightClickMenu';
 
 class Arrange extends Component {
   constructor(){
@@ -32,8 +33,6 @@ class Arrange extends Component {
             if($(this).closest("td").css("background-color") === "rgba(0, 0, 0, 0)" || $(this).closest("td").css("background-color") === "rgb(255, 255, 255)") {
 
               window.openmidi = false;
-              // console.log('white')
-              // $(this).closest("td").css("background-color", "#000");
             } else {
               window.openmidi = true;
               // window.arradd = false;
@@ -46,6 +45,29 @@ class Arrange extends Component {
               arrcol: $(this).closest("td").index() - 1
             }
 
+        });
+
+        $('#arrange table').on( 'contextmenu', 'td', function (e) {
+        
+          window.rcVars = {
+            arrrow: $(this).closest("tr").index(),
+            arrcol: $(this).closest("td").index() - 1
+          }
+          console.log(window.rcVars.arrrow)
+          console.log(window.rcVars.arrcol)
+  
+          $("#contextMenu").css({
+                display: "block",
+                left: e.pageX,
+                top: e.pageY,
+                background: 'white',
+                border: '1px solid black'
+          });
+          return false;
+        });
+  
+        $('html').click(function() {
+          $("#contextMenu").hide();
         });
 
     });
@@ -91,6 +113,7 @@ class Arrange extends Component {
         <table>
           {rows}
         </table>
+        <RightClickMenu addMidi={this.addmidi.bind(this)} />
       </div>
     );
   }
